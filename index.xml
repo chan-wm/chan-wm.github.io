@@ -7,19 +7,10 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://chan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Publications</title>
-      <link>https://chan.github.io/publication/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://chan.github.io/publication/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Slides</title>
