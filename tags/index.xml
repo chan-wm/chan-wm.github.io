@@ -7,44 +7,44 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://chan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>AI in Healthcare</title>
+      <link>https://chan.github.io/tags/ai-in-healthcare/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://chan.github.io/tags/ai-in-healthcare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Vision</title>
+      <link>https://chan.github.io/tags/computer-vision/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://chan.github.io/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Deep Learning</title>
       <link>https://chan.github.io/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://chan.github.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Demo</title>
-      <link>https://chan.github.io/tags/demo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Image Segmentation</title>
+      <link>https://chan.github.io/tags/image-segmentation/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://chan.github.io/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>human</title>
-      <link>https://chan.github.io/tags/human/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://chan.github.io/tags/human/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>robotics</title>
-      <link>https://chan.github.io/tags/robotics/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://chan.github.io/tags/robotics/</guid>
+      <guid>https://chan.github.io/tags/image-segmentation/</guid>
       <description></description>
     </item>
     

@@ -29,10 +29,10 @@
   
     
   
-  <meta name="description" content="Software Engineer">
+  <meta name="description" content="Using deep learning to quantify fungal burden in histology images">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://chan.github.io/authors/">
+  <link rel="alternate" hreflang="en-us" href="https://chan.github.io/project/quantification-of-fungal-burden-in-histology-images/">
 
   
 
@@ -93,44 +93,42 @@
   
 
   
-  <link rel="alternate" href="/authors/index.xml" type="application/rss+xml" title="Chan">
-  <link rel="feed" href="/authors/index.xml" type="application/rss+xml" title="Chan">
-  
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://chan.github.io/authors/">
+  <link rel="canonical" href="https://chan.github.io/project/quantification-of-fungal-burden-in-histology-images/">
 
   
   
   
   
     
-    
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Chan">
-  <meta property="og:url" content="https://chan.github.io/authors/">
-  <meta property="og:title" content="Authors | Chan">
-  <meta property="og:description" content="Software Engineer"><meta property="og:image" content="https://chan.github.io/img/icon-192.png">
-  <meta property="twitter:image" content="https://chan.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="https://chan.github.io/project/quantification-of-fungal-burden-in-histology-images/">
+  <meta property="og:title" content="Quantification of fungal burden in histology images | Chan">
+  <meta property="og:description" content="Using deep learning to quantify fungal burden in histology images"><meta property="og:image" content="https://chan.github.io/project/quantification-of-fungal-burden-in-histology-images/featured.png">
+  <meta property="twitter:image" content="https://chan.github.io/project/quantification-of-fungal-burden-in-histology-images/featured.png"><meta property="og:locale" content="en-us">
   
+  <meta property="article:published_time" content="2022-07-10T00:00:00&#43;00:00">
   
-  
-
-  
-
-
+  <meta property="article:modified_time" content="2022-07-10T00:00:00&#43;00:00">
   
 
+  
+
+
+  
 
 
 
 
-  <title>Authors | Chan</title>
+
+  <title>Quantification of fungal burden in histology images | Chan</title>
 
 </head>
 
@@ -322,6 +320,8 @@
 </nav>
 
 
+  <article class="article article-project py-5" itemscope itemtype="http://schema.org/Article">
+
   
 
 
@@ -335,38 +335,237 @@
 
 
 
-    
 
-    
-    
-    
-    
-    
-    <div class="universal-wrapper py-3">
-      <h1 itemprop="name">Authors</h1>
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/project/quantification-of-fungal-burden-in-histology-images/featured_hu096ca648a767305e0d23ed094bd8cfe9_1213828_680x500_fill_q90_lanczos_smart1_3.png" itemprop="image" alt="">
+        <span
+          class="article-header-caption">Histology image of lung tissues infected with Aspergillus fumigatus</span>
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">Quantification of fungal burden in histology images</h1>
 
       
 
       
+
+
+
+<meta content="2022-07-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2022-07-10 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
       
+    
+    <time>Jul 10, 2022</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
     </div>
   </div>
 </div>
 
-<div class="universal-wrapper">
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>This project was completed and submitted as part of the requirements for my master of engineering degree at Imperial College London. I worked as part of the <a href="https://rtanaka.bg-research.cc.ic.ac.uk/">Biological Control Systems Lab</a> and was supervised by <a href="https://www.imperial.ac.uk/people/r.tanaka">Dr. Reiko Tanaka</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=-R7aRpQAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Dr. Rahman Attar</a>.</p>
+<h1 id="introduction">Introduction</h1>
+<h2 id="aspergillus-fumigatus-and-invasive-aspergillosis">Aspergillus fumigatus and invasive aspergillosis</h2>
+<p>Aspergillus fumigatus (A. fumigatus) is a ubiquitous fungus that humans are exposed to everyday. A. fumigatus reproduces asexually by releasing conidia, a type of asexual spores that
+germinates into hyphae, into the atmosphere. These airborne conidia have a sufficiently small
+diameter of 2-3 μm to reach the lung alveoli and humans inhale several hundred conidia per
+day.</p>
+<p>Inhalation of conidia can cause various illnesses depending on the immune status of the host.
+In immunocompetent individuals, there is rarely any adverse effect since the conidia are efficiently
+neutralised and eliminated by the immune system. However, in immunocompromised patients,
+it can cause life-threatening invasive aspergillosis (IA) where the conidia germinates into hyphae
+that invade the lungs and can spread rapidly to other parts of the body such as brain, heart and
+kidneys which can result in death.</p>
+<p><img src="img/IA.PNG" alt="Invasive Aspergiollosis"></p>
+<h2 id="quantification-of-fungal-burden">Quantification of fungal burden</h2>
+<p>Quantifying fungal burden is important for tracking the disease progression and evaluating the effectiveness of the novel therapeutics. However, enumeration of fungal burden and extent of tissue invasion in histology images is still done manually, which is a tedious and time-consuming task and prone to error.</p>
+
+    </div>
+
+    
+
+<div class="article-tags">
   
-
-  <ul>
-    
-    
-      
-      <li><a href="https://chan.github.io/authors/admin/">Chanasak Mahankarat</a></li>
-    
-  </ul>
-
+  <a class="badge badge-light" href="/tags/ai-in-healthcare/">AI in Healthcare</a>
   
-
+  <a class="badge badge-light" href="/tags/deep-learning/">Deep Learning</a>
+  
+  <a class="badge badge-light" href="/tags/computer-vision/">Computer Vision</a>
+  
+  <a class="badge badge-light" href="/tags/image-segmentation/">Image Segmentation</a>
+  
 </div>
+
+
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://chan.github.io">Chanasak Mahankarat</a></h5>
+      <h6 class="card-subtitle">Software Engineer</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a itemprop="sameAs" href="mailto:chan-wm@outlook.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/chan-wm" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/winn-chanasak/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/files/cv.pdf" >
+              <i class="ai ai-cv"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    </div>
+
+    
+    
+    
+    </div>
+  </div>
+</article>
+
+
 
       
 
