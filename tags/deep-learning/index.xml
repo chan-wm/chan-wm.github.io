@@ -18,9 +18,8 @@
       <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://chan.github.io/project/quantification-of-fungal-burden-in-histology-images/</guid>
-      <description>&lt;p&gt;This project was completed and submitted as part of the requirements for my master of engineering degree at Imperial College London. I worked as part of the &lt;a href=&#34;https://rtanaka.bg-research.cc.ic.ac.uk/&#34;&gt;Biological Control Systems Lab&lt;/a&gt; and was supervised by &lt;a href=&#34;https://www.imperial.ac.uk/people/r.tanaka&#34;&gt;Dr. Reiko Tanaka&lt;/a&gt; and &lt;a href=&#34;https://scholar.google.com/citations?hl=en&amp;amp;user=-R7aRpQAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34;&gt;Dr. Rahman Attar&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;h2 id=&#34;aspergillus-fumigatus-and-invasive-aspergillosis&#34;&gt;Aspergillus fumigatus and invasive aspergillosis&lt;/h2&gt;
+      <description>&lt;p&gt;This project was completed, awarded First Class Honours and submitted as part of the requirements for my master of engineering degree at Imperial College London. I worked as part of the &lt;a href=&#34;https://rtanaka.bg-research.cc.ic.ac.uk/&#34;&gt;Biological Control Systems Lab&lt;/a&gt; and was supervised by &lt;a href=&#34;https://www.imperial.ac.uk/people/r.tanaka&#34;&gt;Dr. Reiko Tanaka&lt;/a&gt; and &lt;a href=&#34;https://scholar.google.com/citations?hl=en&amp;amp;user=-R7aRpQAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34;&gt;Dr. Rahman Attar&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;aspergillus-fumigatus-and-invasive-aspergillosis&#34;&gt;Aspergillus fumigatus and invasive aspergillosis&lt;/h1&gt;
 &lt;p&gt;Aspergillus fumigatus (A. fumigatus) is a ubiquitous fungus that humans are exposed to everyday. A. fumigatus reproduces asexually by releasing conidia, a type of asexual spores that
 germinates into hyphae, into the atmosphere. These airborne conidia have a sufficiently small
 diameter of 2-3 μm to reach the lung alveoli and humans inhale several hundred conidia per
@@ -31,9 +30,96 @@ neutralised and eliminated by the immune system. However, in immunocompromised p
 it can cause life-threatening invasive aspergillosis (IA) where the conidia germinates into hyphae
 that invade the lungs and can spread rapidly to other parts of the body such as brain, heart and
 kidneys which can result in death.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;img/IA.PNG&#34; alt=&#34;Invasive Aspergiollosis&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;quantification-of-fungal-burden&#34;&gt;Quantification of fungal burden&lt;/h2&gt;
+
+
+
+&lt;figure&gt;
+  &lt;img src=&#34;img/IA.PNG&#34;  style=&#34;width:70%&#34;&gt;
+  &lt;figcaption style=&#39;text-align:center;&#39;&gt;Figure 1: Inhalation of conidia resulting in the germination of hyphae in immunocompromised patients
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h1 id=&#34;quantification-of-fungal-burden&#34;&gt;Quantification of fungal burden&lt;/h1&gt;
 &lt;p&gt;Quantifying fungal burden is important for tracking the disease progression and evaluating the effectiveness of the novel therapeutics. However, enumeration of fungal burden and extent of tissue invasion in histology images is still done manually, which is a tedious and time-consuming task and prone to error.&lt;/p&gt;
+&lt;p&gt;To quantify the fungal burden, we first calculate the tissue area by converting the histology image into a binary image through a thresholding technique and counting the number of black pixels which correspond to the tissue pixels. Next, the fungal area is calculated by using a convolutional neural network to segment the fungi region from the histology image and counting the number of white pixels in it as they correspond to the fungi pixels. Finally, the fungal buden is calculated by dividing the fungal area by the tissue area.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+  &lt;img src=&#34;img/fungal_burden_quantification.png&#34;  style=&#34;width:70%&#34;&gt;
+  &lt;figcaption style=&#39;text-align:center;&#39;&gt;Figure 2: Quantification of fungal burden
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h1 id=&#34;dataset&#34;&gt;Dataset&lt;/h1&gt;
+&lt;p&gt;Dataset consisted of 149 512-by-1024 pixels GMS stained patch-level histology images of murine lung infected with A. fumigatus and their corresponding pathologist-verified ground truth binary segmented masks&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+  &lt;img src=&#34;img/dataset.png&#34;  style=&#34;width:70%&#34;&gt;
+  &lt;figcaption style=&#39;text-align:center;&#39;&gt;Figure 5: The process of collecting the dataset 
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h1 id=&#34;semantic-image-segnmentation-and-convolutional-neural-network&#34;&gt;Semantic image segnmentation and convolutional neural network&lt;/h1&gt;
+&lt;p&gt;Semantic image segmentation classifies every pixel of an image with a class label. In our application,
+this means labelling each pixel in the histology images as fungi or non-fungi. Convolutional neural
+network (CNN) is a deep learning architecture inspired by the natural visual perception mechanism. CNN learns important features in images in order to perform prediction, classification and
+segmentation tasks. CNN has been widely used in multiple biomedical image analysis tasks. In histology images, CNN has been used to segment out certain tissue types such as
+leukocytes, lymphocytes and erythocytes, showing great promise in quantifying the fungal burden.&lt;/p&gt;
+&lt;p&gt;CNN architectures for semantic segmentation usually incorporate encoder and decoder networks.
+The encoder network reduces the size of an image to capture important details of the image. This
+allows the model to learn important features of the image, however, it loses the spatial information.
+The decoder network restores back the resolution of the image, allowing the learned features to be
+localised and used to construct the segmented image.&lt;/p&gt;
+&lt;p&gt;In this project, we explored 4 popular segmentation network architectures FCN, U-Net, SegNet and PSPNet, and 2 different pre-trained model backbones VGG16 and ResNet50. We found that VGG U-Net model gave the highest mean DICE score when evaluated using 5-fold cross-validation.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+  &lt;img src=&#34;img/u-net-architecture.png&#34;  style=&#34;width:70%&#34;&gt;
+  &lt;figcaption style=&#39;text-align:center;&#39;&gt;Figure 3: Architecture of U-Net (Ronneberger et al., 2015)
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;img/vgg16.png&#34;  style=&#34;width:70%&#34;&gt;
+  &lt;figcaption style=&#39;text-align:center;&#39;&gt;Figure 4: Architecture of VGG-16 
+(Simonyan &amp; Zisserman, 2015)
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h1 id=&#34;data-augmentation&#34;&gt;Data augmentation&lt;/h1&gt;
+&lt;p&gt;Deep learning techniques relies heavily on large datasets to allow the model to generalise and
+avoid overfitting as the model is exposed to more training examples. However, for biomedical images
+such as histology images, collecting and labelling data can be a very laborious task. Data augmentation is a technique of artificially expanding the size and variety of the dataset by applying image
+transformations on the existing dataset. For this project, we used both geometric and colour transformation. For each input original image, 10 augmented images were generated, inflating the training set by 10 times.&lt;/p&gt;
+&lt;h1 id=&#34;results&#34;&gt;Results&lt;/h1&gt;
+&lt;p&gt;The VGG U-Net achieved the mean DICE score of 0.74±0.03. Figure 6 shows sample plots of the segmentation predicted as well as the predicted fungal burden quantification.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+  &lt;img src=&#34;img/results.png&#34;  style=&#34;width:70%&#34;&gt;
+  &lt;figcaption style=&#39;text-align:center;&#39;&gt;Figure 6: Sample plot of the segmentation and the fungal burden quantification
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+&lt;h1 id=&#34;full-report&#34;&gt;Full report&lt;/h1&gt;
+&lt;p&gt;The full report is available in the PDF format below&lt;/p&gt;
+
+
+&lt;div style=&#39;text-align:center;&#39;&gt;
+&lt;embed src=&#34;files/final_report.pdf&#34; width=&#34;70%&#34; height=&#34;800px&#34; 
+ type=&#34;application/pdf&#34;&gt;
+&lt;/div&gt;
+ 
 </description>
     </item>
     
